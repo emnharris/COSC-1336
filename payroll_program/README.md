@@ -11,4 +11,4 @@ As my Python skills progress, I may revisit this program and continue to expand 
 
 ## Repo File Descriptions
 - Lab 3 entailed creating a payroll program that would calculate bonuses, commission, deductions ([Lab_3_instructions.pdf](https://github.com/emnharris/COSC-1336/blob/master/payroll_program/Lab_3_instructions.pdf)).
-- The payroll program itseld has been committed as one file ([payroll_program.py](https://github.com/emnharris/COSC-1336/blob/master/payroll_program/payroll_program.py)), with changes committed to the same file.
+- The payroll program itself has been committed as one file ([payroll_program.py](https://github.com/emnharris/COSC-1336/blob/master/payroll_program/payroll_program.py)).
