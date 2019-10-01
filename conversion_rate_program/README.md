@@ -12,4 +12,4 @@ As my Python skills progress, I may revisit this program and continue to expand 
 ## Repo File Descriptions
 - Lab 2 entailed creating a simple conversion rate program ([Lab_2_instructions.pdf](https://github.com/emnharris/COSC-1336/blob/master/conversion_rate_program/Lab_2_instructions.pdf)). 
 - Lab 3 built upon the same program ([Lab_3_instructions.pdf](https://github.com/emnharris/COSC-1336/blob/master/conversion_rate_program/Lab_3_instructions.pdf)) by adding simple data validation.
-- The conversion program itself has been committed as one file ([conversion_rate_program.py](https://github.com/emnharris/COSC-1336/blob/master/conversion_rate_program/conversion_rate_program.py)), with changes committed to the same file.
+- The conversion program itself has been committed as one file ([conversion_rate_program.py](https://github.com/emnharris/COSC-1336/blob/master/conversion_rate_program/conversion_rate_program.py)).
