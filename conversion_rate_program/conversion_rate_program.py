@@ -27,7 +27,7 @@ while (not valid and attempt < max_attempt):
         attempt += 1
         print('You have',max_attempt - attempt,'attempt(s) left.')
 # reset attempt counter, take input and run data validation for "F to C"
-if valid:# and attempt < max_attempt):     
+if valid:     
     valid = False    
     attempt = 0
     while (not valid and attempt < max_attempt):
@@ -39,7 +39,7 @@ if valid:# and attempt < max_attempt):
             attempt += 1
             print('You have',max_attempt - attempt,'attempt(s) left.')
 # reset attempt counter, take input, and run data validation for "gallons to liters"
-if valid:# and attempt < max_attempt): 
+if valid: 
     valid = False
     attempt = 0
     while (not valid and attempt < max_attempt):
@@ -51,7 +51,7 @@ if valid:# and attempt < max_attempt):
             attempt += 1
             print('You have',max_attempt - attempt,'attempt(s) left.')    
 # reset attempt counter, take input, and run data validation for "pounds to kilograms"
-if valid:# and attempt < max_attempt):
+if valid:
     valid = False
     attempt = 0
     while (not valid and attempt < max_attempt):
@@ -63,7 +63,7 @@ if valid:# and attempt < max_attempt):
             attempt += 1
             print('You have',max_attempt - attempt,'attempt(s) left.')
 # reset attempt counter, take input, and run data validation for "inches to centimeters"        
-if valid:# and attempt < max_attempt):
+if valid:
     valid = False
     attempt = 0
     while (not valid and attempt < max_attempt):
@@ -76,7 +76,7 @@ if valid:# and attempt < max_attempt):
             print('You have',max_attempt - attempt,'attempt(s) left.')
 if(attempt >= max_attempt):
     print(TERMINATE)
-else:#if(valid): and attempt < max_attempt):
+else:
     # run calculations
     km = mi * mi_to_km
     degC = (degF - 32) * (5/9)
