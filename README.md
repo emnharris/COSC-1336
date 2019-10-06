@@ -9,6 +9,6 @@ See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/convers
 Corresponds to Lab 3 assignment. Calculates and displays payroll information, including longevity, bonuses, commissions, and deductions, based on user input.
 See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/payroll_program/READ_ME.md) for more details.
 
-### Grade Tracker Program
+### Gradebook Program
 Corresponds to Lab 4 assignment. Tracks student grades, assigns letter grades, and calculates averages, based on user input.
 See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/gradebook_program/readme.md) for more details.
