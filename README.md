@@ -11,4 +11,4 @@ See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/payroll
 
 #### Grade Tracker Program
 Corresponds to Lab 4 assignment. Tracks student grades, assigns letter grades, and calculates averages, based on user input.
-See[program read-me](https://github.com/emnharris/COSC-1336/blob/master/gradebook_program/readme.md) for more details.
+See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/gradebook_program/readme.md) for more details.
