@@ -1,81 +1,85 @@
-print('\n===== IMPERIAL TO METRIC CONVERSION CALCULATOR =====')
-print('=' * 52)
-
-#conversion constants
+# conversion constants
 mi_to_km = 1.60
 gal_to_L = 3.90
 lb_to_kg = 0.45
 in_to_cm = 2.54
-#attempt constant for limited attempt looping data validation
-attempt = 0
-#max attempt constant
+# max attempt constant
 max_attempt = 3
-#message constants
-TRY_AGAIN = '\nSorry, negative values are not accepted. Try again.\n'
-TERMINATE = '\nDATA INVALID\nGOODBYE'
+# data validation constant
+valid = True
 
-
-mi = float(input('Miles: '))
-while(mi < 0 and attempt < max_attempt):
-    print(TRY_AGAIN)
-    print('You have',max_attempt - attempt,'tries left.')
+def main():
+    intro()
     mi = float(input('Miles: '))
-    attempt = attempt + 1
-if(mi < 0 and attempt >= max_attempt):    #if third try is still invalid, end program
-    print(TERMINATE)
-else:
-    attempt = 0     #reset number of tries allowed
-    degF = float(input('\nTemperature (F): '))
-    while(degF > 1000 and attempt < max_attempt):
-        print(TRY_AGAIN)
+    unit = 'miles'
+    validate_neg(mi, unit)
+    if valid:
+        degF = float(input('\n\nDegrees F: '))
+        unit = 'temperature'
+        validate_temp(degF, unit)
+    if valid:
+        gal = float(input('\n\nGallons: '))
+        unit = 'gallons'
+        validate_neg(gal, unit)
+    if valid:
+        lb = float(input('\n\nDry pounds: '))
+        unit = 'pounds'
+        validate_neg(lb, unit)
+    if valid:
+        inches = float(input('\n\nInches: '))
+        unit = 'inches'
+        validate_neg(inches, unit)
+
+def intro():
+    print('\n===== IMPERIAL TO METRIC CONVERSION CALCULATOR =====')
+    print('=' * 52)
+
+def validate_neg(value, unit):
+    #attempt constant for limited attempt looping data validation
+    attempt = 0
+    while(value < 0 and attempt < max_attempt):
+        print('\nSorry, negative values are not accepted.\n')
         print('You have',max_attempt - attempt,'tries left.')
-        degF = float(input('\nTemperature (F): '))
+        value = float(input('Try again: '))
         attempt = attempt + 1
-    if(degF > 1000 and attempt >= max_attempt):
-        print(TERMINATE)
+    if(value < 0 and attempt >= max_attempt):    #if third try is still invalid, end program
+        print('\nDATA INVALID\nGOODBYE')
+        global valid
+        valid = False
     else:
-        attempt = 1
-        gal = float(input('\nGallons: '))
-        while(gal < 0 and attempt < max_attempt):
-            print(TRY_AGAIN)
-            print('You have',max_attempt - attempt,'tries left.')
-            gal = float(input('Gallons: '))
-            attempt = attempt + 1
-        if(gal < 0 and attempt >= max_attempt):
-            print(TERMINATE)
-        else:
-            attempt = 1
-            lb = float(input('\nDry pounds: '))
-            while(lb < 0 and attempt < max_attempt):
-                print(TRY_AGAIN)
-                print('You have',max_attempt - attempt,'tries left.')
-                lb = float(input('\nDry pounds: '))
-                attempt = attempt + 1
-            if(lb < 0 and attempt >= max_attempt):
-                print(TERMINATE)
-            else:
-                attempt = 1
-                inches = float(input('\nInches: '))
-                while(inches < 0 and attempt < max_attempt):
-                    print(TRY_AGAIN)
-                    print('You have',max_attempt - attempt,'tries left.')
-                    inches = float(input('\nInches: '))
-                    attempt = attempt + 1
-                if(inches < 0 and attempt >= max_attempt):
-                    print(TERMINATE)
-                else:
-                    #run calculations
-                    km = mi * mi_to_km
-                    degC = (degF - 32) * (5/9)
-                    L = gal * gal_to_L
-                    kg = lb * lb_to_kg
-                    cm = inches * in_to_cm
-                    #display output
-                    print('=======================RESULTS======================')
-                    print('=' * 52)
-                    print('\n',mi,' miles = ',format(km,'.1f'),' kilometres.\n',sep='')
-                    print(degF,'degrees Fahrenheit =',format(degC,'.1f'),'degrees Centigrade.\n')
-                    print(gal,'gallons =',format(L,'.1f'),'litres.\n')
-                    print(lb,'pounds =',format(kg,'.1f'),'kilograms.\n')
-                    print(inches,'inches =',format(cm,'.1f'),'centimetres.\n')
-                    
+        run_conversion(value, unit)
+
+def validate_temp(value,unit):
+    attempt = 0
+    while(value > 1000 and attempt < max_attempt):
+        print('\nSorry, values over 1000 are not accepted.\n')
+        print('You have',max_attempt - attempt,'tries left.')
+        value = float(input('Try again: '))
+        attempt = attempt + 1
+    if(value > 1000 and attempt >= max_attempt):    #if third try is still invalid, end program
+        print('\nDATA INVALID\nGOODBYE')
+        global valid
+        valid = False
+    else:
+        run_conversion(value, unit)
+
+def run_conversion(imperial, measure):
+    if measure == 'miles':
+        km = imperial * mi_to_km
+        print('\n',imperial,' miles = ',format(km,',.1f'),' kilometers', sep='')
+    elif measure == 'temperature':
+        degC = (imperial - 30) * (5/9)
+        print('\n',imperial,' degrees F = ',format(degC,',.1f'),' degrees C', sep='')
+    elif measure == 'gallons':
+        litr = imperial * gal_to_L
+        print('\n',imperial,' gallons = ',format(litr,',.1f'),' liters', sep='')
+    elif measure == 'pounds':
+        kg = imperial * lb_to_kg
+        print('\n',imperial,' pounds = ',format(kg,',.1f'),' kilograms', sep='')
+    else:
+        cm = imperial * in_to_cm
+        print('\n',imperial,' inches = ',format(cm,',.1f'),' centimenters', sep='')
+        global valid
+        valid = False
+
+main()
