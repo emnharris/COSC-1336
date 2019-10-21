@@ -13,5 +13,6 @@ See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/payroll
 Corresponds to Lab 4 assignment. Tracks student grades, assigns letter grades, and calculates averages, based on user input.
 See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/gradebook_program/README.md) for more details.
 
-### Guessing Game
-Corresponds to Lab 5B assignment. Generates a random number then asks users to guess the number and provides feedback.
+### Guessing Game Program
+Corresponds to Lab 5.2 assignment. Generates a random number then asks users to guess the number and provides feedback.
+See [program read-me](https://github.com/emnharris/COSC-1336/blob/master/guessing_game_program/README.md) for more details.
