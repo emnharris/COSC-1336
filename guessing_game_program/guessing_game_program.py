@@ -1,7 +1,7 @@
 import random
 
-def main():
-    intro()
+def play_game():
+    display_intro()
     keep_going = 'y'
     while keep_going == 'y':
         attempts = 0
@@ -9,7 +9,7 @@ def main():
         guess = accept_guesses()
     
         while guess != roll:
-            feedback(roll, guess)
+            display_feedback(roll, guess)
             guess = accept_guesses()
             attempts += 1
     
@@ -17,7 +17,7 @@ def main():
         print('Number of tries:',attempts)
         keep_going = input('\nDo you want to keep playing? y or n\n')
 
-def intro():
+def display_intro():
     print('='*45)
     print(('='*15),'GUESSING GAME',('='*15))
     print('\n\n',(' '*4),'Guess a number between 1 and 1000!\n')
@@ -29,7 +29,7 @@ def accept_guesses():
 def roll_number():
     return random.randint(1, 1000)
 
-def feedback(random, answer):
+def display_feedback(random, answer):
     difference = 10
     colder = random - difference
     hotter = random + difference
@@ -42,4 +42,4 @@ def feedback(random, answer):
     elif (answer <= hotter and answer > random):
         print('Getting warm but too high. Try again.\n')
 
-main()
+play_game()

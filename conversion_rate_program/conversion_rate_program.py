@@ -1,6 +1,6 @@
 import convert
 
-def main():
+def run_program():
     convert.intro()
     mi = float(input('Miles: '))
     unit = 'miles'
@@ -37,4 +37,4 @@ def main():
             cm = convert.run_conversion(inches, unit)
             print('\n',inches,' inches = ',format(cm,',.1f'),' centimenters', sep='')
 
-main()
+run_program()
