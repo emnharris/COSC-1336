@@ -1,5 +1,6 @@
+import convert
+
 def main():
-    import convert
     convert.intro()
     mi = float(input('Miles: '))
     unit = 'miles'
