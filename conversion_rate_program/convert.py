@@ -40,13 +40,19 @@ def run_conversion(imperial, measure):
     lb_to_kg = 0.45
     in_to_cm = 2.54
 
-    if measure == 'miles':
+    MI_MEASURE = 'miles'
+    GAL_MEASURE = 'gallons'
+    TEMP_MEASURE = 'degrees'
+    LB_MEASURE = 'pounds'
+    INCH_MEASURE = 'inches'
+
+    if measure == MI_MEASURE:
         metric = imperial * mi_to_km
-    elif measure == 'temperature':
+    elif measure == TEMP_MEASURE:
         metric = (imperial - 30) * (5/9)
-    elif measure == 'gallons':
+    elif measure == GAL_MEASURE:
         metric = imperial * gal_to_L
-    elif measure == 'pounds':
+    elif measure == LB_MEASURE:
         metric = imperial * lb_to_kg
     else:
         metric = imperial * in_to_cm
