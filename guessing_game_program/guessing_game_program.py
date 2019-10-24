@@ -35,11 +35,11 @@ def feedback(random, answer):
     hotter = random + difference
     if answer < colder:
         print('Too low. Try again.\n')
-    if (answer >= colder and answer < random):
+    elif (answer >= colder and answer < random):
         print('Getting warm but too low. Try again.\n')
-    if (answer > hotter):
+    elif (answer > hotter):
         print('Too high. Try again.\n')
-    if (answer <= hotter and answer > random):
+    elif (answer <= hotter and answer > random):
         print('Getting warm but too high. Try again.\n')
 
 main()
