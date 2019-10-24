@@ -27,8 +27,7 @@ def accept_guesses():
     return answer
 
 def roll_number():
-    number = random.randint(1, 1000)
-    return number
+    return random.randint(1, 1000)
 
 def feedback(random, answer):
     difference = 10
