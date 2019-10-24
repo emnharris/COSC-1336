@@ -1,3 +1,5 @@
+import random
+
 def main():
     intro()
     keep_going = 'y'
@@ -25,7 +27,6 @@ def accept_guesses():
     return answer
 
 def roll_number():
-    import random
     number = random.randint(1, 1000)
     return number
 
